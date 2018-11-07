@@ -1,0 +1,24 @@
+.btn {
+	max-width: 200px;
+	margin: 0 auto;
+	padding: $btn-padding;
+	display: block;
+	color: $btn-color;
+	text-transform: uppercase;
+	background: $btn-background;
+	border-radius: $border-radius-small;
+	transition: background .2s ease;
+
+	&:hover {
+		text-decoration: none;
+		background: $btn-background--hover;
+	}
+
+	&.alt {
+		background: $btn-background-alt;
+
+		&:hover {
+			background: $btn-background-alt--hover;
+		}
+	}
+}

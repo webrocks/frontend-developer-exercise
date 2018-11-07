@@ -1,0 +1,61 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	color: $base-text-color;
+	background: $base-background-color;
+	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+	min-width: $base-min-width;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// adaptive images
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+address {
+	font-style: normal;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	margin: 0 0 20px;
+}
+
+p {
+	margin: 0 0 20px;
+}
+
+.js-tab-hidden {
+	display: block !important;
+	left: -9999px !important;
+	position: absolute !important;
+	top: -9999px !important;
+}
+
+.hidden,
+legend span.hidden {
+	position: absolute;
+	top: auto;
+	left: -9999px;
+}
+
+@media only screen and (min-width: $mw-desktop) {
+	a[href^="tel"],
+	a[href^="fax"] {
+		cursor: default;
+		pointer-events: none;
+	}
+}

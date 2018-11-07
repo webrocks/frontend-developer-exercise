@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Frontend Developer Test</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="header">
+		<h1 class="hidden">Welcome to Frontend Developer Test page</h1>
+		<form action="#" class="search-form">
+			<fieldset>
+				<input type="search" class="search">
+				<span class="submit">
+					<input type="submit" value="Search" title="Search">
+				</span>
+			</fieldset>
+		</form>
+	</header>
+	<main class="main">
+		<div class="profile">
+			<section class="profile-card">
+				<span class="avatar no-image">No image</span>
+				<h2>[Pre][First][Last][degree]</h2>
+				<strong class="specialty">[Primary_Specialty]</strong>
+				<div class="star-rating rating-4" title="Rating: [rating]"><span>Rating: [rating]</span></div>
+				<div class="btn-holder">
+					<a class="btn" href="#tab3-0">READ REVIEWS</a>
+					<a class="btn" href="#tab2-0">GET DIRECTIONS</a>
+				</div>
+				<div class="contact-info">
+					<address>[City], [State]</address>
+					<span class="phone">
+						<a href="tel:[phone]">[phone]</a>
+					</span>
+					<span class="school">[school]</span>
+				</div>
+			</section>
+			<div class="profile-details">
+				<ul class="tabset">
+					<li>
+						<a href="#tab1-0">Summary</a>
+					</li>
+					<li>
+						<a href="#tab2-0">Locations &amp; Directions</a>
+					</li>
+					<li>
+						<a href="#tab3-0">Ratings &amp; Reviews</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div id="tab1-0">
+						<article>
+							<h2>About [Pre][First][Last]</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum risus sed odio euismod, eu vulputate
+	diam suscipit. Morbi et velit purus. Aenean aliquet pharetra ultricies. Cras pulvinar luctus lectus, a fringilla
+	mauris imperdiet eget. Aenean sagittis cursus nisl id imperdiet. Cras congue viverra dui, ac facilisis sapien
+	malesuada in. Morbi rutrum, leo eget sagittis rutrum, purus lacus cursus risus, ac malesuada nisi leo non ligula.
+	Aenean varius massa orci, ac porta massa dapibus eu. Nunc semper mauris vitae libero lobortis, blandit
+	pellentesque velit bibendum. Etiam ac eleifend ligula.</p>
+						</article>
+					</div>
+					<div id="tab2-0">
+						<ul class="locations-list">
+							<li>
+								<div class="map">
+									<img src="images/img-placeholder-responsive.png" alt="[Company Name]">
+								</div>
+								<h2>[Company Name]</h2>
+								<address>
+									[Address]<br>
+									[City], [State] [Zip]
+								</address>
+							</li>
+							<li>
+								<div class="map">
+									<img src="images/img-placeholder-responsive.png" alt="[Company Name]">
+								</div>
+								<h2>[Company Name]</h2>
+								<address>
+									[Address]<br>
+									[City], [State] [Zip]
+								</address>
+							</li>
+						</ul>
+					</div>
+					<div id="tab3-0">
+						<section class="ratings">
+							<h2>Overall Rating</h2>
+							<div class="star-rating inline rating-4" title="Rating: [rating]"><span>Rating: [rating]</span></div>
+							<span>[overall_rating] out of 5 with [rating_count] ratings.</span>
+						</section>
+						<section class="comments-area">
+							<h2>Showing [comment count] Comments</h2>
+							<ul class="comments">
+								<li>
+									<h3>[Title]</h3>
+									<p>[comment]</p>
+								</li>
+								<li>
+									<h3>[Title]</h3>
+									<p>[comment]</p>
+								</li>
+								<li>
+									<h3>[Title]</h3>
+									<p>[comment]</p>
+								</li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ad">
+			<img src="images/img-placeholder-300x250.png" alt="Placeholder image">
+		</div>
+	</main>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+	<script>
+		window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')
+	</script>
+	<script src="js/jquery.main.min.js" defer></script>
+</body>
+</html>

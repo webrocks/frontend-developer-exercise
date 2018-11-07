@@ -1,0 +1,99 @@
+// Colors
+$white: #fff;
+// Primary
+$primary-color01: #489CFE;
+$primary-color02: #277DE2;
+// Secondary
+$secondary-color01: #84C938;
+$secondary-color02: #73A739;
+// Background
+$background-color: #FAFAFA;
+// Text
+$text-color01: #B7C2D0;
+$text-color02: #657385;
+$text-color03: #414E5D;
+$text-color04: #172535;
+
+// screen rizes
+$mw-desktop: 1025px;
+$tablet: 1024px;
+$mobile: 767px;
+
+// Fonts
+$base-font-sans-serif: 'Roboto', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+// MDI icons
+$mdi-account: "\e900";
+$mdi-map-marker: "\e901";
+$mdi-phone: "\e902";
+$mdi-star: "\e903";
+$mdi-star-outline: "\e904";
+$mdi-magnify: "\e905";
+$mdi-school: "\e906";
+
+// Font Sizes
+$font-size-small: 14px;
+$line-height-small: 1.21428571; // 17px
+$font-size-medium: 15px;
+$line-height-medium: 1.2; // 18px
+$font-size-average: 16px;
+$line-height-average: 1.1875; // 19px
+$font-size-x-average: 20px;
+$line-height-x-average: 1.15; // 23px
+$font-size-large: 24px;
+$line-height-large: 1.125; // 27px
+$font-size-big: 32px;
+$line-height-big: 1.09375; // 35px
+
+// Border Radius
+$border-radius-small: 2px;
+$border-radius-round: 50%;
+
+// Body
+$base-text-color: $text-color02;
+$base-background-color: $background-color;
+$font-size-base: $font-size-average;
+$line-height-base: $line-height-average; // 19px for 16px font size
+$base-font-family: $base-font-sans-serif;
+$base-min-width: 320px;
+
+$base-padding: 16px;
+
+// Liks
+$base-link-color: $primary-color01;
+
+// Buttons 
+$btn-color: $white;
+$btn-background: $primary-color01;
+$btn-background--hover: $primary-color02;
+$btn-background-alt: $secondary-color01;
+$btn-background-alt--hover: $secondary-color02;
+$btn-padding: 10px $base-padding;
+
+// Forms
+$form-element-background-color: $white;
+$form-element-padding: $btn-padding;
+$placeholder-color: $primary-color01;
+
+// Headers
+$h1-font-size: $font-size-big;
+$h1-line-height: $line-height-big; // 35px for 32px font size
+$h2-font-size: $font-size-large;
+$h2-line-height: $line-height-large; // 27px for 24px font size
+$h3-font-size: $font-size-x-average;
+$h3-line-height: $line-height-x-average; // 23px for 20px font size
+$h4-font-size: $font-size-average;
+$h4-line-height: $line-height-average; // 19px for 16px font size
+$h5-font-size: $font-size-medium;
+$h5-line-height: $line-height-medium; // 18px for 15px font size
+$h6-font-size: $font-size-small;
+$h6-line-height: $line-height-small; // 17px for 14px font size
+
+@media only screen and (max-width: $mobile) {
+	$font-size-base: $font-size-small;
+	$line-height-base: $line-height-small;
+
+	$base-padding: 10px;
+
+	$font-size-x-average: $font-size-x-average - 2;
+	$btn-padding: $base-padding;
+}

@@ -1,0 +1,30 @@
+// list reset
+%listreset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// clearfix
+%clearfix {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+// mdi icons
+%mdi {
+	&:before {
+		font-family: 'mdi';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}

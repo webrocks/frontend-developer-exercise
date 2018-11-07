@@ -1,0 +1,441 @@
+@import 'vendors/normalize';
+
+@import 'base/variables';
+@import 'base/fonts';
+@import 'base/mixins';
+@import 'base/helpers';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/buttons';
+@import 'base/forms';
+
+.header {
+	margin-bottom: 40px;
+	padding: $base-padding;
+	background: $primary-color01;
+	@extend %clearfix;
+}
+
+.search-form {
+	width: 100%;
+	max-width: 500px;
+	float: right;
+	position: relative;
+	padding-right: 60px;
+	border-radius: $border-radius-small;
+	background: $white;
+
+	.search {
+		width: 100%;
+		border-radius: 0;
+		background: none;
+		float: left;
+	}
+
+	.submit {
+		@include size(60px, 100%);
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		input {
+			@include size(100%);
+			overflow: hidden;
+			padding: 0;
+			border-style: none;
+			background: none;
+			text-indent: -999px;
+		}
+
+		&:before {
+			@extend %mdi;
+			content: $mdi-magnify;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 32px;
+			pointer-events: none;
+		}
+	}
+}
+
+.main {
+	padding: 0 $base-padding 30px;
+}
+
+.profile {
+	padding-bottom: 30px;
+	display: flex;
+
+	&-card {
+		width: 300px;
+		margin-right: 25px;
+		border: 2px solid $text-color01;
+		padding: $base-padding;
+		text-align: center;
+
+		h2 {
+			margin-bottom: 10px;
+			color: $text-color04;
+		}
+	}
+
+	.avatar {
+		@include size(100px);
+		overflow: hidden;
+		margin: -30px auto 30px;
+		border-radius: $border-radius-round;
+		background: $text-color01;
+		display: block;
+
+		&.no-image {
+			text-indent: -9999px;
+			position: relative;
+
+			&:before {
+				@extend %mdi;
+				content: $mdi-account;
+				text-indent: 0;
+				position: absolute;
+				bottom: -21px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-size: 116px;
+			}
+		}
+	}
+
+	h2 {
+		font-weight: normal;
+	}
+
+	.specialty {
+		font-size: $font-size-x-average;
+		line-height: $line-height-x-average;
+		font-weight: 300;
+		margin-bottom: 15px;
+		display: block;
+	}
+
+	.btn-holder {
+		margin-bottom: 15px;
+
+		.btn {
+			margin-bottom: 10px;
+		}
+	}
+
+	.contact-info {
+		padding-top: $base-padding;
+		border-top: 2px solid $text-color01;
+		text-align: left;
+		font-size: $font-size-x-average;
+		line-height: $line-height-x-average;
+
+		span {
+			display: block;
+		}
+
+		address,
+		span {
+			margin-bottom: 10px;
+			padding-left: 30px;
+			position: relative;
+
+			&:before {
+				@extend %mdi;
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-size: 24px;
+			}
+		}
+
+		address:before {
+			content: $mdi-map-marker;
+		}
+
+		.phone {
+			a {
+				color: $base-text-color;
+			}
+
+			&:before {
+				content: $mdi-phone;
+			}
+		}
+
+		.school:before {
+			content: $mdi-school;
+		}
+	}
+
+	&-details {
+		flex: 1 0 0%;
+		border: 2px solid $text-color01;
+		padding: $base-padding;
+
+		.tabset {
+			@extend %listreset;
+			margin-bottom: 56px;
+
+			li {
+				display: inline-block;
+				font-size: $font-size-x-average;
+				line-height: $line-height-x-average;
+				font-weight: 300;
+				padding: 0 25px 10px 0;
+
+				&.active {
+					font-weight: normal;
+				}
+			}
+
+			a {
+				display: inline-block;
+				padding-bottom: 10px;
+				position: relative;
+
+				&:before {
+					content: '';
+					height: 2px;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+				}
+			}
+
+			a:hover,
+			.active a {
+				text-decoration: none;
+
+				&:before {
+					background: $base-link-color;
+				}
+			}
+		}
+
+		.tab-content {
+			padding: 0 50px;
+		}
+
+		.locations-list {
+			@extend %listreset;
+			font-size: $font-size-x-average;
+			line-height: $line-height-x-average;
+			font-weight: 300;
+
+			li {
+				@extend %clearfix;
+				padding-bottom: $base-padding;
+			}
+
+			.map {
+				max-width: 200px;
+				height: 150px;
+				overflow: hidden;
+				float: left;
+				margin: 0 15px 15px 0;
+			}
+
+			h2 {
+				color: $text-color03;
+			}
+		}
+
+		.ratings {
+			padding-bottom: 16px;
+			min-height: 160px;
+		}
+
+		.comments {
+			@extend %listreset;
+
+			h3 {
+				font-weight: 300;
+			}
+
+			li {
+				padding: $base-padding $base-padding 1px;
+
+				&:not(:first-child) {
+					border-top: 2px solid $text-color01;
+				}
+			}
+		}
+	}
+}
+/* star rating */
+.star-rating {
+	width: 150px;
+	overflow: hidden;
+	margin: 0 auto 15px;
+	display: block;
+	font-size: 28px;
+	color: $secondary-color01;
+
+	&.inline {
+		display: inline-block;
+		margin: 0 0 -10px;
+	}
+
+	span {
+		@extend .hidden;
+	}
+
+	&:before {
+		@extend %mdi;
+	}
+	/* rating 1 */
+	&.rating-0:before {
+		content: $mdi-star-outline
+				$mdi-star-outline
+				$mdi-star-outline
+				$mdi-star-outline
+				$mdi-star-outline;
+	}
+	/* rating 1 */
+	&.rating-1:before {
+		content: $mdi-star
+				$mdi-star-outline
+				$mdi-star-outline
+				$mdi-star-outline
+				$mdi-star-outline;
+	}
+	/* rating 2 */
+	&.rating-2:before {
+		content: $mdi-star
+				$mdi-star
+				$mdi-star-outline
+				$mdi-star-outline
+				$mdi-star-outline;
+	}
+	/* rating 3 */
+	&.rating-3:before {
+		content: $mdi-star
+				$mdi-star
+				$mdi-star
+				$mdi-star-outline
+				$mdi-star-outline;
+	}
+	/* rating 4 */
+	&.rating-4:before {
+		content: $mdi-star
+				$mdi-star
+				$mdi-star
+				$mdi-star
+				$mdi-star-outline;
+	}
+	/* rating 4 */
+	&.rating-5:before {
+		content: $mdi-star
+				$mdi-star
+				$mdi-star
+				$mdi-star
+				$mdi-star;
+	}
+}
+
+.ad {
+	width: 300px;
+}
+
+@media only screen and (max-width: $tablet) {
+	.profile {
+		.avatar {
+			@include size(75px);
+
+			&.no-image:before {
+				font-size: 90px;
+			}
+		}
+
+		&-details {
+			.tab-content {
+				padding: 0 25px;
+			}
+
+			.tabset {
+				margin-bottom: 33px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $tablet - 1) {
+	.profile-details .locations-list {
+		li {
+			padding-bottom: 30px;
+		}
+		.map {
+			max-width: none;
+			margin-right: 0;
+			float: none;
+		}
+	}
+}
+
+@media only screen and (max-width: $mobile) {
+	.search-form {
+		max-width: none;
+	}
+
+	.main {
+		width: 320px;
+		margin: 0 auto;
+	}
+
+	.profile {
+		padding-bottom: 20px;
+		display: block;
+
+		&-card {
+			margin: 0 0 20px;
+		}
+
+		.avatar {
+			@include size(50px);
+
+			&.no-image:before {
+				font-size: 60px;
+				bottom: -10px;
+			}
+		}
+
+		&-details {
+			.tabset {
+				margin-bottom: 15px;
+
+				li {
+					display: block;
+					padding: 0 0 5px;
+				}
+
+				a {
+					padding-bottom: 5px;
+				}
+			}
+
+			.tab-content {
+				padding: 0;
+			}
+
+			.ratings {
+				min-height: 0;
+				padding-bottom: 20px;
+			}
+		}
+	}
+
+	.star-rating {
+		width: 125px;
+		font-size: 24px;
+
+		&.inline {
+			display: block;
+			margin: 0;
+		}
+	}
+}
