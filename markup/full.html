@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Frontend Developer Test</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="header">
+		<h1 class="hidden">Welcome to Frontend Developer Test page</h1>
+		<form action="#" class="search-form">
+			<fieldset>
+				<input type="search" class="search">
+				<span class="submit">
+					<input type="submit" value="Search" title="Search">
+				</span>
+			</fieldset>
+		</form>
+	</header>
+	<main class="main">
+		<div class="profile">
+			<section class="profile-card">
+				<span class="avatar no-image">No image</span>
+				<h2>Dr. John Reed MD</h2>
+				<strong class="specialty">Rheumatology</strong>
+				<div class="star-rating rating-4" title="Rating: 4"><span>Rating: 4</span></div>
+				<div class="btn-holder">
+					<a class="btn" href="#" data-click-to='a[href="#tab3-0"]'>READ REVIEWS</a>
+					<a class="btn" href="#" data-click-to='a[href="#tab2-0"]'>GET DIRECTIONS</a>
+				</div>
+				<div class="contact-info">
+					<address>Worcester, MA</address>
+					<span class="phone">
+						<a href="tel:5084255446">5084255446</a>
+					</span>
+					<span class="school">University Of Rochester School Of Medicine And Dentistry, 1977</span>
+				</div>
+			</section>
+			<div class="profile-details">
+				<ul class="tabset">
+					<li>
+						<a href="#tab1-0">Summary</a>
+					</li>
+					<li>
+						<a href="#tab2-0">Locations &amp; Directions</a>
+					</li>
+					<li>
+						<a href="#tab3-0">Ratings &amp; Reviews</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div id="tab1-0">
+						<article>
+							<h2>About Dr. John Reed MD</h2>
+							<p>Dr. John Reed, MD is a Doctor primarily located in Worcester, MA, with another office in
+								Westborough, MA. He has 40 years of experience. His specialties include Rheumatology and
+								Internal Medicine. Dr. Reed is affiliated with UMass Memorial Medical
+								Center - University Campus, Saint Vincent Hospital and UMass Memorial Medical Center. Dr.
+								Reed has received 4 awards. He speaks English.</p>
+						</article>
+					</div>
+					<div id="tab2-0">
+						<ul class="locations-list">
+							<li>
+								<div class="map">
+									<img src="images/img-placeholder-responsive.png" alt="Reliant Medical Group">
+								</div>
+								<h2>Reliant Medical Group</h2>
+								<address>
+									425 Lake Ave N<br>
+									Worcester, MA 01605
+								</address>
+							</li>
+							<li>
+								<div class="map">
+									<img src="images/img-placeholder-responsive.png" alt="Reliant Medical Group">
+								</div>
+								<h2>Reliant Medical Group</h2>
+								<address>
+									106 E Main St<br>
+									Westborough, MA 01581
+								</address>
+							</li>
+						</ul>
+					</div>
+					<div id="tab3-0">
+						<section class="ratings">
+							<h2>Overall Rating</h2>
+							<div class="star-rating inline rating-4" title="Rating: 4"><span>Rating: 4</span></div>
+							<span>4 out of 5 with 6 ratings.</span>
+						</section>
+						<section class="comments-area">
+							<h2>Showing 6 Comments</h2>
+							<ul class="comments">
+								<li>
+									<h3>Test Title 1</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean bibendum consequat ex, vel fermentum turpis. Fusce pulvinar, nunc ut vehicula viverra, felis dolor facilisis urna, non tincidunt felis libero eget est. Duis rutrum erat vitae enim luctus gravida. Etiam vel venenatis nunc.</p>
+								</li>
+								<li>
+									<h3>Test Title 2</h3>
+									<p>Nunc mi odio, condimentum ac tincidunt mattis, sagittis ac ipsum. Pellentesque at vulputate urna, sit amet pellentesque sem. Aenean condimentum lobortis nibh et convallis.</p>
+								</li>
+								<li>
+									<h3>Test Title 3</h3>
+									<p>In vulputate, elit sit amet tempus molestie, elit elit lobortis leo, sit amet porta lorem dui sed tortor. Curabitur tempus, libero vel sodales imperdiet, neque magna bibendum tortor, quis finibus enim nibh luctus orci. Sed est mauris, auctor ut quam at, venenatis finibus odio.</p>
+								</li>
+								<li>
+									<h3>Test Title 4</h3>
+									<p>In et nibh ornare dolor pharetra pellentesque. Donec convallis augue nisi, vitae iaculis eros finibus ut. Mauris imperdiet eget ante id scelerisque.</p>
+								</li>
+								<li>
+									<h3>Test Title 5</h3>
+									<p>Duis consectetur eget ex nec accumsan. Mauris vel purus a tellus commodo tincidunt. Donec ac tempor nulla. Aliquam viverra vel massa sed sollicitudin.</p>
+								</li>
+								<li>
+									<h3>Test Title 6</h3>
+									<p>Donec eu justo lobortis, facilisis leo eget, semper ipsum. Mauris non libero interdum, laoreet purus sed, eleifend quam. Quisque ac urna ultrices, egestas enim at, pellentesque nibh. Curabitur euismod, elit sit amet vestibulum tincidunt, massa eros tincidunt dui, quis euismod nibh sapien et magna.</p>
+								</li>
+							</ul>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ad">
+			<img src="images/img-placeholder-300x250.png" alt="Placeholder image">
+		</div>
+	</main>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+	<script>
+		window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')
+	</script>
+	<script src="js/jquery.main.min.js" defer></script>
+</body>
+</html>

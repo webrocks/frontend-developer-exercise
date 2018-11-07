@@ -1,9 +1,14 @@
-jQuery(function() {
+$(function() {
 	// content tabs init
-	jQuery('.tabset').tabset({
+	$('.tabset').tabset({
 		tabLinks: 'a',
 		addToParent: true,
 		defaultTab: true
+	});
+	// connect buttons with tabs
+	$('[data-click-to]').on('click', function() {
+		var $sel = $(this.getAttribute('data-click-to'));
+		$sel.trigger('click');
 	});
 });
 
